@@ -5,6 +5,11 @@ import {useHistory} from 'react-router-dom';
 const SignUp = (props) => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+    const [bio, setBio] = useState('');
+    const [img_url, setImgUrl] = useState('');
+    const [email, setEmail] = useState('');
+    const [age, setAge] = useState('');
+    const [phone_number, setPhoneNumber] = useState('');
     const history = useHistory();
     const [message, setMessage] = useState('');
 
@@ -18,7 +23,12 @@ const SignUp = (props) => {
             },
             body: JSON.stringify({
                 name: name,
-                password: password
+                password: password,
+                img_url: img_url,
+                email: email,
+                bio: bio, 
+                age: age,
+                phone_number: phone_number
             })
         })
             .then(resp => resp.json())
@@ -34,6 +44,26 @@ const SignUp = (props) => {
                     <FormGroup> 
                         <Form.Label> Name: </Form.Label>
                     <Form.Control placeholder="Enter Name" onChange={e => setName(e.target.value)} />
+                    </FormGroup>
+                    <Form.Label> Image: </Form.Label>
+                    <Form.Control placeholder="Enter Your Image" onChange={e => setImgUrl(e.target.value)} />
+                    <FormGroup> 
+                    </FormGroup>
+                    <Form.Label> Email: </Form.Label>
+                    <Form.Control placeholder="Enter Email" onChange={e => setEmail(e.target.value)} />
+                    <FormGroup> 
+                    </FormGroup>
+                    <Form.Label> Age: </Form.Label>
+                    <Form.Control placeholder="Enter Age" onChange={e => setAge(e.target.value)} />
+                    <FormGroup> 
+                    </FormGroup>
+                    <Form.Label> Phone Number: </Form.Label>
+                    <Form.Control placeholder="Enter Phone Number" onChange={e => setPhoneNumber(e.target.value)} />
+                    <FormGroup> 
+                    </FormGroup>
+                    <Form.Label> Bio: </Form.Label>
+                    <Form.Control placeholder="Tell Us About Yourself" onChange={e => setBio(e.target.value)} />
+                    <FormGroup> 
                     </FormGroup>
                     <Form.Label> Password: </Form.Label>
                     <Form.Control placeholder="Enter Password" onChange={e => setPassword(e.target.value)} />

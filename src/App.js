@@ -12,6 +12,7 @@ import Music from './Components/Music';
 import Profile from './Components/Profile';
 import ThisWeekend from './Components/ThisWeekend';
 import useHistory from 'react-router-dom';
+import MyEvents from './Components/MyEvents';
 
 
 const history = createBrowserHistory()
@@ -21,17 +22,18 @@ function App() {
     return (
       <Router history={history}>
         <Container fluid>
-          <Navbar bg="light" expand="lg">
+          <Navbar bg="light" expand="lg" >
             <Navbar.Brand href="/">Tap In!</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="/login">Login</Nav.Link>
-                <Nav.Link href="/signup">Signup</Nav.Link>
                 <Nav.Link href="/this-weekend">This Weekend</Nav.Link>
                 <Nav.Link href="/music">Muisc</Nav.Link>
                 <Nav.Link href="/charity-causes">Charity And Causes</Nav.Link>
                 <Nav.Link href="/food">Food and Drink</Nav.Link>
+                <Nav.Link href="/my-events">My Events</Nav.Link>
+                <Nav.Link href="/login">Login</Nav.Link>
+                <Nav.Link href="/signup">Signup</Nav.Link>
                 <Nav.Link href="/profile">Profile</Nav.Link>
 
 
@@ -47,6 +49,7 @@ function App() {
           </Navbar>
           <Container>
             <Switch>
+              <Route path="/my-events"> <MyEvents/> </Route>
               <Route path="/charity-causes"> <CharityCauses/> </Route>
               <Route path="/signup"> <SignUp history={history} /> </Route>
               <Route path="/login"> <LogIn /> </Route>
@@ -55,6 +58,7 @@ function App() {
               <Route path="/food"> <Food/> </Route>
               <Route path="/profile"> <Profile/> </Route>
               <Route path="/"> <EventsPage/> </Route>
+
 
 
 

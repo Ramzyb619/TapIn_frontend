@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, CardColumns } from 'react-bootstrap';
+import { Row, CardColumns, Spinner } from 'react-bootstrap';
 import EventCard from './EventCard';
 
 
@@ -30,6 +30,7 @@ class EventsPage extends React.Component {
                             event={event}
                             />
                     })}
+                     <Spinner animation="border" variant="success" />
                 </CardColumns>
 
             </Row>
