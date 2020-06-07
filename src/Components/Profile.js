@@ -19,48 +19,21 @@ class Profile extends React.Component {
   render() {
     return (
       <div>
-        <Card style={{ width: '40rem' }}>
-          <Card.Img variant="top" src={this.state.user.img_url} />
-          <Card.Body >
-            <Card.Title  >{this.state.user.name}</Card.Title>
-            <Card.Text>
-              <Row className="justify-content-md-center">
-                Email: {this.state.user.email}
-              </Row>
-              <Row className="justify-content-md-center">
-                Phone Number: {this.state.user.phone_number}
-              </Row>
-              <Row className="justify-content-md-center">
-                Age: {this.state.user.age}
-              </Row>
-              <Row className="justify-content-md-center">
-                Bio: {this.state.user.bio}
-              </Row>
+        <Row className="justify-content-md-center" >
 
-            </Card.Text>
-          </Card.Body>
-        </Card>
+          <Col xs="4">
+            <h3>
+              {this.state.user.name}
+            </h3>
+            <img src={this.state.user.img_url} ></img>
+            <h3>Email:</h3> <h5>{this.state.user.email}</h5>
+            <h2> Phone Number:</h2>{this.state.user.phone_number}
+            <h2>Age: </h2>{this.state.user.age}
+            <h2>Bio:</h2> {this.state.user.bio}
 
 
-        {/* <Row className="justify-content-md-center" >
-          <Col xs="4"> <img src={this.state.user.img_url} ></img> </Col>
+          </Col>
         </Row>
-        <Row className="justify-content-md-center">
-          Name: {this.state.user.name}
-        </Row>
-        <Row className="justify-content-md-center">
-          Email: {this.state.user.email}
-        </Row>
-        <Row className="justify-content-md-center">
-          Phone Number: {this.state.user.phone_number}
-        </Row>
-        <Row className="justify-content-md-center">
-          Age: {this.state.user.age}
-        </Row>
-        <Row className="justify-content-md-center">
-          Bio: {this.state.user.bio}
-        </Row> */}
-
       </div>
 
 

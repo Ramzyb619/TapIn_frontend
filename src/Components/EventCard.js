@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Card from "react-bootstrap/Card";
 import { Button, Image } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 
 class EventCard extends Component {
     
     render(){
-      const {title,category,location,img_url,description } = this.props.event
+      const {title,category,location,img_url,description,id} = this.props.event
      return(  
         <Card>
             <Card.Img variant="top" src={img_url}/> 
@@ -19,7 +20,11 @@ class EventCard extends Component {
                 <Button variant="outline-success" >
                     Add To Your Events
                 </Button>{'  '}
-                
+                <Link to={`/show/${id}`}> 
+                <Button variant="outline-success" >
+                    View This Event
+                </Button>{'  '}
+                </Link>
             </Card.Body>
         </Card>
      )}
