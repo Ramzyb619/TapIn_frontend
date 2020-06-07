@@ -13,6 +13,7 @@ import Profile from './Components/Profile';
 import ThisWeekend from './Components/ThisWeekend';
 import useHistory from 'react-router-dom';
 import MyEvents from './Components/MyEvents';
+import Show from './Components/Show';
 
 
 const history = createBrowserHistory()
@@ -35,20 +36,13 @@ function App() {
                 <Nav.Link href="/login">Login</Nav.Link>
                 <Nav.Link href="/signup">Signup</Nav.Link>
                 <Nav.Link href="/profile">Profile</Nav.Link>
-
-
-
-
-
-
-  
-  
               </Nav>
   
             </Navbar.Collapse>
           </Navbar>
           <Container>
             <Switch>
+            <Route path="/show/:id" component={Show}/>
               <Route path="/my-events"> <MyEvents/> </Route>
               <Route path="/charity-causes"> <CharityCauses/> </Route>
               <Route path="/signup"> <SignUp history={history} /> </Route>
