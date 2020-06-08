@@ -26,12 +26,12 @@ class Show extends Component {
                             {this.state.show.title}
                         </h3>
                         <img src={this.state.show.img_url} ></img>
-                        {/* <h3>Email:</h3> <h5>{this.state.user.email}</h5>
-                        <h2> Phone Number:</h2>{this.state.user.phone_number}
-                        <h2>Age: </h2>{this.state.user.age}
-                        <h2>Bio:</h2> {this.state.user.bio} */}
-
-
+                        <h3>Title:</h3> <h5>{this.state.show.title}</h5>
+                        <h2> Category:</h2>{this.state.show.category}
+                        <h2>Location: </h2>{this.state.show.location}
+                        <h2>Description:</h2> {this.state.show.description}
+                        <h2>Date/Time:</h2> {this.state.show.date_time}
+                        <h2>Host:</h2> {this.state.show.user_id}
                     </Col>
                 </Row>
             </div>

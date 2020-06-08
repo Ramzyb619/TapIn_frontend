@@ -8,14 +8,27 @@ class EventsPage extends React.Component {
 
     state = {
         events: [],
+        display: []
     }
 
     componentDidMount() {
         fetch("http://localhost:3000/events")
             .then(resp => resp.json())
             .then(data => this.setState({
-                events: data
+                events: data,
+                display: data
             }))
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.searchResults !== this.props.searchResults){
+
+            if(this.props.searchResults && this.props.searchResults.length > 0){
+                this.setState({
+                    display: this.props.searchResults
+                })
+            }
+        }       
     }
 
     render() {
@@ -23,7 +36,7 @@ class EventsPage extends React.Component {
         return (
             <Row>
                 <CardColumns>
-                    {this.state.events.map((event, index) => {
+                    {this.state.display.map((event, index) => {
                         return <EventCard
                             key={event.id}
                             index={index}
