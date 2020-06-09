@@ -13,7 +13,6 @@ class SearchBar extends React.Component {
     }
 
     handleClick = (e) => {
-
         fetch(`http://localhost:3000/events/search?query=${this.state.query}`)
         .then(resp => resp.json())
         .then(data => this.props.searchCallback(data))        

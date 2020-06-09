@@ -43,7 +43,8 @@ class EventsPage extends React.Component {
                             event={event}
                             />
                     })}
-                     <Spinner animation="border" variant="success" />
+                      <Spinner animation="grow" variant="dark" />
+                      
                 </CardColumns>
 
             </Row>
