@@ -1,6 +1,6 @@
 import React from 'react';
 import EventsPage from './Components/EventsPage.js';
-import { Container, Col, Row, Navbar, Nav, Button, Form, FormControl } from 'react-bootstrap';
+import { Container, Col, Row, Navbar, Nav, Button, Form, FormControl, NavDropdown } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import './App.css';
@@ -15,6 +15,7 @@ import useHistory from 'react-router-dom';
 import MyEvents from './Components/MyEvents';
 import Show from './Components/Show';
 import SearchBar from './Components/SearchBar';
+import TAP from './Img/TAP.png';
 
 
 const history = createBrowserHistory()
@@ -26,60 +27,63 @@ class App extends React.Component {
 
   searchCallback = (results) => {
     this.setState(
-    {searchResults: results}
-  )
-  console.log(results)
-}
+      { searchResults: results }
+    )
+    console.log(results)
+  }
 
-render() {
-  return (
-    <Router history={history}>
-      <Container fluid>
-        <Navbar bg="light" expand="lg" >
-          <Navbar.Brand href="/">Tap In!</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="/this-weekend">This Weekend</Nav.Link>
-              <Nav.Link href="/music">Muisc</Nav.Link>
-              <Nav.Link href="/charity-causes">Charity And Causes</Nav.Link>
-              <Nav.Link href="/food">Food and Drink</Nav.Link>
-              <Nav.Link href="/my-events">My Events</Nav.Link>
-            </Nav>
-              <Nav.Link href="/login">Login</Nav.Link>
-              <Nav.Link href="/signup">Signup</Nav.Link>
-            <Nav.Link href="/profile">Profile</Nav.Link>
-            <SearchBar searchCallback={this.searchCallback}/>
+  render() {
+    return (
+      <Router history={history}>
+        <Container fluid>
+          <Navbar bg="light" expand="lg" >
+            <Navbar.Brand href="/"><img src={TAP}></img></Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Nav.Link href="/this-weekend">This Weekend</Nav.Link>
+                <Nav.Link href="/music">Music</Nav.Link>
+                <Nav.Link href="/charity-causes">Charity And Causes</Nav.Link>
+                <Nav.Link href="/food">Food and Drink</Nav.Link>
+                <Nav.Link href="/my-events">My Events</Nav.Link>
+              </Nav>
+              <NavDropdown id="basic-nav-dropdown" title="Menu">
+                <NavDropdown.Item href="/login">Log In</NavDropdown.Item>
+                <NavDropdown.Item href="/signup">Sign Up</NavDropdown.Item>
+                <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+              </NavDropdown>
 
-          </Navbar.Collapse>
-        </Navbar>
-        <Container>
-          <Switch>
-            <Route path="/show/:id" component={Show} />
-            <Route path="/my-events"> <MyEvents /> </Route>
-            <Route path="/charity-causes"> <CharityCauses /> </Route>
-            <Route path="/signup"> <SignUp history={history} /> </Route>
-            <Route path="/login"> <LogIn /> </Route>
-            <Route path="/this-weekend"> <ThisWeekend /> </Route>
-            <Route path="/music"> <Music /> </Route>
-            <Route path="/food"> <Food /> </Route>
-            <Route path="/profile"> <Profile /> </Route>
-            <Route path="/"> <EventsPage searchResults = {this.state.searchResults} /> </Route>
+              <SearchBar searchCallback={this.searchCallback} />
 
-
-
-
-
+            </Navbar.Collapse>
+          </Navbar>
+          <Container>
+            <Switch>
+              <Route path="/show/:id" component={Show} />
+              <Route path="/my-events"> <MyEvents /> </Route>
+              <Route path="/charity-causes"> <CharityCauses /> </Route>
+              <Route path="/signup"> <SignUp history={history} /> </Route>
+              <Route path="/login"> <LogIn /> </Route>
+              <Route path="/this-weekend"> <ThisWeekend /> </Route>
+              <Route path="/music"> <Music /> </Route>
+              <Route path="/food"> <Food /> </Route>
+              <Route path="/profile"> <Profile /> </Route>
+              <Route path="/"> <EventsPage searchResults={this.state.searchResults} /> </Route>
 
 
-          </Switch>
+
+
+
+
+
+            </Switch>
+          </Container>
+
         </Container>
+      </Router>
+    );
+  }
 
-      </Container>
-    </Router>
-  );
 }
-    
-    }
 
 export default App;
