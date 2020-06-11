@@ -26,7 +26,7 @@ class Profile extends React.Component {
               {this.state.user.name}
             </h3>
             <img src={this.state.user.img_url} ></img>
-            <h3>Email:</h3> <h5>{this.state.user.email}</h5>
+            <h3>EmaAil:</h3> <h5>{this.state.user.email}</h5>
             <h2> Phone Number:</h2>{this.state.user.phone_number}
             <h2>Age: </h2>{this.state.user.age}
             <h2>Bio:</h2> {this.state.user.bio}

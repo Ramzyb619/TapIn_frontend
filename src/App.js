@@ -15,7 +15,8 @@ import useHistory from 'react-router-dom';
 import MyEvents from './Components/MyEvents';
 import Show from './Components/Show';
 import SearchBar from './Components/SearchBar';
-import TAP from './Img/TAP.png';
+import Pic from './Img/Pic.png';
+import AddEvent from './Components/AddEvent'
 
 
 const history = createBrowserHistory()
@@ -37,7 +38,7 @@ class App extends React.Component {
       <Router history={history}>
         <Container fluid>
           <Navbar bg="light" expand="lg" >
-            <Navbar.Brand href="/"><img src={TAP}></img></Navbar.Brand>
+            <Navbar.Brand href="/"><img src={Pic} width="120"></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
@@ -47,10 +48,14 @@ class App extends React.Component {
                 <Nav.Link href="/food">Food and Drink</Nav.Link>
                 <Nav.Link href="/my-events">My Events</Nav.Link>
               </Nav>
+              <Nav.Link href="/create-event"> 
+              <Button> Host an Event </Button>
+              </Nav.Link>
               <NavDropdown id="basic-nav-dropdown" title="Menu">
+                <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                 <NavDropdown.Item href="/login">Log In</NavDropdown.Item>
                 <NavDropdown.Item href="/signup">Sign Up</NavDropdown.Item>
-                <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
               </NavDropdown>
 
               <SearchBar searchCallback={this.searchCallback} />
@@ -59,6 +64,7 @@ class App extends React.Component {
           </Navbar>
           <Container>
             <Switch>
+              <Route path="/create-event"> <AddEvent/> </Route> 
               <Route path="/show/:id" component={Show} />
               <Route path="/my-events"> <MyEvents /> </Route>
               <Route path="/charity-causes"> <CharityCauses /> </Route>
