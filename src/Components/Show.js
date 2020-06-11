@@ -9,6 +9,7 @@ class Show extends Component {
     }
     componentDidMount() {
         let id = this.props.match.params.id;
+        console.log(id);
         fetch(`http://localhost:3000/events/${id}`)
             .then(resp => resp.json())
             .then(data => this.setState({
@@ -16,11 +17,11 @@ class Show extends Component {
             }))
     }
     render() {
+
         console.log(this.state.show)
         return (
             <div>
                 <Row className="justify-content-md-center" >
-
                     <Col xs="4">
                         <h3>
                             {this.state.show.title}
@@ -31,7 +32,9 @@ class Show extends Component {
                         <h2>Location: </h2>{this.state.show.location}
                         <h2>Description:</h2> {this.state.show.description}
                         <h2>Date/Time:</h2> {this.state.show.date_time}
-                        <h2>Host:</h2> {this.state.show.user_id}
+                        {this.state.show.user_name &&
+                        <span>  <h2>Host:</h2> {this.state.show.user_name} </span>
+                            }
                     </Col>
                 </Row>
             </div>
