@@ -10,16 +10,7 @@ const LogIn = () => {
 
     document.body.classList.add("bg-color-dimgray");
 
-    // const doLogIn = (e) => {
-    //     e.preventDefault()
-    //     fetch ("http://localhost:3000/users/"+name)
-    //     .then(resp => resp.json())
-    //     .then(user => {
-    //         localStorage.setItem("name", JSON.stringify(user))
-
-    //     })
-    //     .then(resp => history.push("/"))
-    // }
+  
     const doLogIn = (e) => {
         e.preventDefault()
         fetch("http://localhost:3000/sessions", {
