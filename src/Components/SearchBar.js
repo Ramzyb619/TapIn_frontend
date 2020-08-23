@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
         return (
             <div>
                 <Form inline>
-                    <FormControl type="text" placeholder="search" className="mr-sm-2" onChange={this.handleChange} />
+                    <FormControl type="text" placeholder="Search By Category" className="mr-sm-2" onChange={this.handleChange} />
                     <Button onClick={this.handleClick}>
                         Search
                   </Button>

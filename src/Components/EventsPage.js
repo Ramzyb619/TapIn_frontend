@@ -8,7 +8,8 @@ class EventsPage extends React.Component {
 
     state = {
         events: [],
-        display: []
+        display: [],
+        eventsAttending: []
     }
 
     componentDidMount() {
@@ -18,11 +19,16 @@ class EventsPage extends React.Component {
                 events: data,
                 display: data
             }))
+            fetch("http://localhost:3000/user_events")
+            .then(resp => resp.json())
+            .then(data => this.setState({
+                eventsAttending: data
+            }))
     }
+
 
     componentDidUpdate(prevProps) {
         if (prevProps.searchResults !== this.props.searchResults){
-
             if(this.props.searchResults && this.props.searchResults.length > 0){
                 this.setState({
                     display: this.props.searchResults
