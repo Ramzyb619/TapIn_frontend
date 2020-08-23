@@ -15,6 +15,8 @@ class ThisWeekend extends React.Component {
         }))
 }
 
+//console.log(time.date)
+
     render() {
       return (
         <div>      
