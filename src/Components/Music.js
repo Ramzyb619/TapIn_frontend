@@ -16,7 +16,7 @@ class Music extends React.Component {
 }
 
     render() {
-      // console.log(this.state.musicEvents)
+      console.log(this.state.musicEvents)
       return (
         <Row>
             <CardColumns>
