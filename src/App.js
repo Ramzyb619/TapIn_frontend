@@ -36,16 +36,16 @@ class App extends React.Component {
   render() {
     return (
       <Router history={history}>
-        <Container fluid>
+        <div>
           <Navbar bg="light" expand="lg" >
-            <Navbar.Brand href="/"><img src={Pic} width="120"></img></Navbar.Brand>
+            <Navbar.Brand href="/"><img className ="logo" src={Pic} width="120"></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="/this-weekend">This Weekend</Nav.Link>
                 <Nav.Link href="/music">Music</Nav.Link>
                 <Nav.Link href="/charity-causes">Charity And Causes</Nav.Link>
                 <Nav.Link href="/food">Food and Drink</Nav.Link>
+                <Nav.Link href="/this-weekend">This Weekend</Nav.Link>
                 <Nav.Link href="/my-events">My Events</Nav.Link>
               </Nav>
               <Nav.Link href="/create-event"> 
@@ -64,6 +64,7 @@ class App extends React.Component {
           </Navbar>
           <Container>
             <Switch>
+              
               <Route path="/create-event"> <AddEvent/> </Route> 
               <Route path="/show/:id" component={Show} />
               <Route path="/my-events"> <MyEvents /> </Route>
@@ -85,7 +86,7 @@ class App extends React.Component {
             </Switch>
           </Container>
 
-        </Container>
+        </div>
       </Router>
     );
   }

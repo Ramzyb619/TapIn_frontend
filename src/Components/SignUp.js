@@ -37,7 +37,7 @@ const SignUp = (props) => {
     }
 
     return (
-        <Jumbotron className="text-center"> 
+        // <Jumbotron className="text-center"> 
         <div className="row">
             <div className="col-4 mx-auto"> 
                 <Form onSubmit={register}>
@@ -74,7 +74,7 @@ const SignUp = (props) => {
                 </Form>
             </div>
         </div>
-        </Jumbotron>
+        // </Jumbotron>
 
 
     )

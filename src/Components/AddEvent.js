@@ -26,11 +26,11 @@ const AddEvent = (props) => {
             },
             body: JSON.stringify({
                 title: title,
-                image: image,
+                img_url: image,
                 description: description,
                 location: location,
                 category: category,
-                dateTime: dateTime,
+                date_time: dateTime,
                 user_id: user_id
             })
         })
@@ -73,7 +73,7 @@ const AddEvent = (props) => {
                 <FormGroup>
                 </FormGroup>
                 <Form.Label> Date/Time: </Form.Label>
-                <Form.Control placeholder="Date and Time" onChange={e => setDateTime(e.target.value)} />
+                <Form.Control placeholder="dd/mm/yyyy hh:mm AM/PM" onChange={e => setDateTime(e.target.value)} />
                 <FormGroup>
                 </FormGroup>
 
