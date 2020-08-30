@@ -11,7 +11,7 @@ class EventsPage extends React.Component {
         display: [],
         eventsAttending: []
     }
-
+console.log(state.events)
     componentDidMount() {
         fetch("http://localhost:3000/events")
             .then(resp => resp.json())
