@@ -6,6 +6,7 @@ class ThisWeekend extends React.Component {
   state = {
     weekendEvents: []
   }
+  console.log(state.weekendEvents)
   
   componentDidMount() {
     fetch("http://localhost:3000/events/this-weekend")
