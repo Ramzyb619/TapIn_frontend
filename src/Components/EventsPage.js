@@ -26,19 +26,7 @@ console.log(state.events)
             }))
     }
 
-    // componentDidMount() {
-    //     fetch("http://localhost:3000/events")
-    //         .then(resp => resp.json())
-    //         .then(data => this.setState({
-    //             events: data,
-    //             display: data
-    //         }))
-    //         fetch("http://localhost:3000/user_events")
-    //         .then(resp => resp.json())
-    //         .then(data => this.setState({
-    //             eventsAttending: data
-    //         }))
-    // }
+
 
     componentDidUpdate(prevProps) {
         if (prevProps.searchResults !== this.props.searchResults){
