@@ -15,6 +15,14 @@ class Music extends React.Component {
         }))
 }
 
+// componentDidMount() {
+//   fetch("http://localhost:3000/events/music")
+//       .then(resp => resp.json())
+//       .then(data => this.setState({
+//           musicEvents: data
+//       }))
+// }
+
     render() {
       console.log(this.state.musicEvents)
       return (
