@@ -27,17 +27,6 @@ console.log(state.events)
     }
 
 
-   // fetch("http://localhost:3000/sessions", {
-    //     method: "POST",
-    //     headers: {
-    //         "content-type": "application/json",
-    //         accepts: "application/json"
-    //     },
-    //     body: JSON.stringify({
-    //         password: password,
-    //         email: email,
-    //     })
-    // })
     componentDidUpdate(prevProps) {
         if (prevProps.searchResults !== this.props.searchResults){
             if(this.props.searchResults && this.props.searchResults.length > 0){
