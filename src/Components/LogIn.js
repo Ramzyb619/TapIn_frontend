@@ -38,17 +38,7 @@ const LogIn = () => {
             
 
     }
-  // fetch("http://localhost:3000/sessions", {
-    //     method: "POST",
-    //     headers: {
-    //         "content-type": "application/json",
-    //         accepts: "application/json"
-    //     },
-    //     body: JSON.stringify({
-    //         password: password,
-    //         email: email,
-    //     })
-    // })
+
 
 
 
