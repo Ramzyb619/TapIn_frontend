@@ -19,6 +19,12 @@ class SearchBar extends React.Component {
         .then(data => this.props.searchCallback(data))        
     }
 
+    // fetch("http://localhost:3000/events", {
+    //     method: "POST",
+    //     headers: {
+    //         "content-type": "application/json",
+    //         accepts: "application/json"
+
     render() {
         return (
             <div>
