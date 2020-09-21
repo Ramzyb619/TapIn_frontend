@@ -6,6 +6,11 @@ class SearchBar extends React.Component {
         query: ""
     }
 
+    // fetch(`http://localhost:3000/users/${userId}/events_attending`)
+//             .then(resp => resp.json())
+//             .then(data => this.setState({
+//                 myEvents: data
+//             }))
     handleChange = (e) => {
         this.setState(
             {query: e.target.value}
