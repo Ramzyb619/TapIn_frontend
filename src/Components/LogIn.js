@@ -39,11 +39,7 @@ const LogIn = () => {
 
     }
 
-// fetch(`http://localhost:3000/users/${userId}/events_attending`)
-//             .then(resp => resp.json())
-//             .then(data => this.setState({
-//                 myEvents: data
-//             }))
+
 
 
     return (
