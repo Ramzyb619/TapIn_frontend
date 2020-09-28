@@ -49,8 +49,3 @@ class Profile extends React.Component {
 
 export default Profile;
 
-    // fetch("http://localhost:3000/events", {
-    //     method: "POST",
-    //     headers: {
-    //         "content-type": "application/json",
-    //         accepts: "application/json"
