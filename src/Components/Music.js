@@ -16,6 +16,12 @@ class Music extends React.Component {
 }
 
 
+ // fetch("http://localhost:3000/events", {
+    //     method: "POST",
+    //     headers: {
+    //         "content-type": "application/json",
+    //         accepts: "application/json"
+
 
     render() {
       console.log(this.state.musicEvents)

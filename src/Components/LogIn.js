@@ -41,12 +41,6 @@ const LogIn = () => {
 
 
 
- // fetch("http://localhost:3000/events", {
-    //     method: "POST",
-    //     headers: {
-    //         "content-type": "application/json",
-    //         accepts: "application/json"
-
 
     return (
         <Row className="d-flex justify-content-center"  >
