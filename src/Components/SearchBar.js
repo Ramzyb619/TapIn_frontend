@@ -35,11 +35,13 @@ class SearchBar extends React.Component {
     }
 
 
-    // fetch("http://localhost:3000/events", {
+    
+}
+
+export default SearchBar;
+
+  // fetch("http://localhost:3000/events", {
     //     method: "POST",
     //     headers: {
     //         "content-type": "application/json",
     //         accepts: "application/json"
-}
-
-export default SearchBar;
