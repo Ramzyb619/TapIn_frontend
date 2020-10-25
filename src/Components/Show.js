@@ -11,12 +11,7 @@ class Show extends Component {
     }
     console.log(state.show)
     
- // fetch("http://localhost:3000/events", {
-    //     method: "POST",
-    //     headers: {
-    //         "content-type": "application/json",
-    //         accepts: "application/json"
-
+ 
 
     componentDidMount() {
         let id = this.props.match.params.id;
