@@ -38,7 +38,11 @@ const AddEvent = (props) => {
             .then(resp => history.push(`/show/${resp.id}`))
     }
 
-    
+     // fetch("http://localhost:3000/events", {
+    //     method: "POST",
+    //     headers: {
+    //         "content-type": "application/json",
+    //         accepts: "application/json"
 
 
 
