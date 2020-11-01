@@ -38,7 +38,7 @@ const AddEvent = (props) => {
             .then(resp => history.push(`/show/${resp.id}`))
     }
 
-    
+   
 
 
 

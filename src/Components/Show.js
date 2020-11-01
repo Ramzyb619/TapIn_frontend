@@ -11,6 +11,8 @@ class Show extends Component {
     }
     console.log(state.show)
     
+ 
+
     componentDidMount() {
         let id = this.props.match.params.id;
         console.log(id);
