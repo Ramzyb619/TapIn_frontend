@@ -25,11 +25,7 @@ console.log(state.events)
                 eventsAttending: data
             }))
     }
-  // fetch("http://localhost:3000/events", {
-    //     method: "POST",
-    //     headers: {
-    //         "content-type": "application/json",
-    //         accepts: "application/json"
+
 
     componentDidUpdate(prevProps) {
         if (prevProps.searchResults !== this.props.searchResults){
